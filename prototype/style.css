@@ -1,0 +1,121 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Form Container --- */
+.form_wrapper {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Grouping Inputs --- */
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+/* --- Inputs, Selects & Textarea --- */
+.form_group input, 
+.form_group select, 
+.form_group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 1rem;
+    color: #1e293b;
+    transition: all 0.3s ease;
+}
+
+.form_group input:focus, 
+.form_group select:focus, 
+.form_group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* --- Row (Category & Author) --- */
+.form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* --- Textarea Height --- */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* --- Buttons Section --- */
+.btn_sv_cnc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn__add {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn__add:hover {
+    background-color: #1d4ed8;
+}
+
+.btn_cancel {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.btn_cancel:hover {
+    color: #0f172a;
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+    .form_row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form_wrapper {
+        padding: 20px;
+    }
+}
